@@ -19,8 +19,8 @@ const App = () => {
 
   const getData = () => {
     if (searchString !== '') {
-
-      fetch(`http://www.omdbapi.com/?apikey=e46964fb&s=${searchString}&page=${strana}`)
+      // Fetch your free api key from http://www.omdbapi.com/
+      fetch(`http://www.omdbapi.com/?apikey=[YourApiKey]&s=${searchString}&page=${strana}`)
         .then((res) => res.json())
         .then((data) => {
           setFilm(data.Search);
